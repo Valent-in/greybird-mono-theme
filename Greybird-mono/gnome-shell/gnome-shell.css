@@ -1,12 +1,21 @@
 
 #panel {
-    /*background-color: rgba(20, 20, 20, 0.8);*/
-    background-color: rgba(17, 12, 13, 0.8);
-    height: 24px;
+	background-color: rgba(17, 12, 13, 0.8);
+	height: 24px;
 }
 
 #panel .panel-corner {
-    -panel-corner-radius: 0;
+	-panel-corner-radius: 0;
+}
+
+/* Reduce padding for last panel button */
+#panel > :last-child > :last-child > .panel-button {
+	-natural-hpadding: 4px;
+	-minimum-hpadding: 4px;
+}
+
+#panel .panel-button:hover {
+	background-color: #303030;
 }
 
 .app-well-app-running-dot {
@@ -19,37 +28,43 @@
 }
 
 .osd-window {
-  text-align: center;
-  font-weight: bold;
-  spacing: 12px;
-  margin: 32px;
-  min-width: 64px;
-  min-height: 64px; }
-  .osd-window StIcon {
-    icon-size: 6.54em; }
-  .osd-window .osd-monitor-label {
-    font-size: 3em; }
-  .osd-window .level {
-    height: 8px;
-    -barlevel-height: 8px;
-    -barlevel-background-color: rgba(238, 238, 236, 0.1);
-    -barlevel-active-background-color: #eeeeec;
-    -barlevel-overdrive-color: #b2161d;
-    -barlevel-overdrive-separator-width: 3px;
+	text-align: center;
+	font-weight: bold;
+	spacing: 12px;
+	margin: 32px;
+	min-width: 64px;
+	min-height: 64px;
+}
+
+.osd-window StIcon {
+	icon-size: 6.54em;
+}
+
+.osd-window .osd-monitor-label {
+	font-size: 3em;
+}
+
+.osd-window .level {
+	height: 8px;
+	-barlevel-height: 8px;
+	-barlevel-background-color: rgba(238, 238, 236, 0.1);
+	-barlevel-active-background-color: #eeeeec;
+	-barlevel-overdrive-color: #b2161d;
+	-barlevel-overdrive-separator-width: 3px;
 }
 
 /*input entry*/
 StEntry:focus {
-    border-color: #092444;
-    box-shadow: inset 0 0 0 1px #1b6acb;
+	border-color: #092444;
+	box-shadow: inset 0 0 0 1px #1b6acb;
 }
 
 /*menus*/
 .popup-menu-boxpointer, .candidate-popup-boxpointer {
-  -arrow-border-radius: 2px;
-  -arrow-base: 0;
-  -arrow-rise: 0;
-  margin: 5px;
+	-arrow-border-radius: 2px;
+	-arrow-base: 0;
+	-arrow-rise: 0;
+	margin: 5px;
 }
 
 .workspace-thumbnail-indicator {
@@ -60,6 +75,7 @@ StEntry:focus {
 	box-shadow: inset 0 -2px 0 #398ee7;
 }
 
+/* Fix spacing for window tumbnails */
 .dashtodock-app-well-preview-menu-item {
 	margin: 5px;
 	padding-right: 5px;
@@ -71,8 +87,19 @@ StEntry:focus {
 }
 
 .window-close {
+	background-color: transparent;
+	background-image: url("assets/close-active.png");
+	background-size: 24px;
 	border: none;
 	border-radius: 2px;
+	box-shadow: none;
+	color: transparent;
+	height: 24px;
+	width: 24px;
+}
+
+.window-close:hover {
+	background-image: url("assets/close-hover.png");
 }
 
 .button:focus, .modal-dialog-linked-button:focus {
@@ -84,4 +111,3 @@ StEntry:focus {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
-
