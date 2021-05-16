@@ -1,4 +1,3 @@
-
 #panel {
 	background-color: rgba(17, 12, 13, 0.8);
 	height: 24px;
@@ -8,18 +7,12 @@
 	-panel-corner-radius: 0;
 }
 
-/* Reduce padding for last panel button */
-#panel > :last-child > :last-child > .panel-button {
-	-natural-hpadding: 4px;
-	-minimum-hpadding: 4px;
-}
-
 #panel .panel-button:hover {
 	background-color: #303030;
 }
 
-.app-well-app-running-dot {
-	background-color: #398ee7; /*dashes*/
+#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
+	box-shadow: inset 0 -2px 0 #398ee7;
 }
 
 .calendar .calendar-today {
@@ -67,14 +60,6 @@ StEntry:focus {
 	margin: 5px;
 }
 
-.workspace-thumbnail-indicator {
-	border-color: #398ee7; 
-}
-
-#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
-	box-shadow: inset 0 -2px 0 #398ee7;
-}
-
 /* Fix spacing for window tumbnails */
 .dashtodock-app-well-preview-menu-item {
 	margin: 5px;
@@ -102,8 +87,20 @@ StEntry:focus {
 	background-image: url("assets/close-hover.png");
 }
 
+.app-well-app-running-dot {
+	background-color: #398ee7; /*dashes*/
+}
+
 .button:focus, .modal-dialog-linked-button:focus {
 	box-shadow: inset 0 0 0 1px #398ee7;
+}
+
+.app-view-control:checked {
+	box-shadow: inset 0 -2px #398ee7;
+}
+
+.workspace-thumbnail-indicator {
+	border-color: #398ee7;
 }
 
 /* fix BottomPanel glitch */
