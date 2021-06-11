@@ -685,12 +685,12 @@ searchbar, .location-bar { border-width: 0 0 1px; padding: 3px; }
 }
 
 .titlebar button.text-button.suggested-action:not(.destructive-action) {
-  background-color: #0066CC;
+  background-color: #398ee7;
   color: white;
 }
 
 .titlebar button.text-button.destructive-action {
-  background-color: #CC0000;
+  background-color: #ef2929;
   color: white;
 }
 
@@ -704,16 +704,16 @@ searchbar, .location-bar { border-width: 0 0 1px; padding: 3px; }
   box-shadow: none;
 }
 
-.titlebar button:not(.suggested-action):not(.destructive-action):drop(active), .titlebar button:not(.suggested-action):not(.destructive-action):hover {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-
 .titlebar button:not(.suggested-action):not(.destructive-action):focus {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-.titlebar button:not(.suggested-action):not(.destructive-action):active {
+.titlebar button:not(.suggested-action):not(.destructive-action):drop(active), .titlebar button:not(.suggested-action):not(.destructive-action):hover {
   background-color: rgba(255, 255, 255, 0.12);
+}
+
+.titlebar button:not(.suggested-action):not(.destructive-action):active {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .titlebar button:not(.suggested-action):not(.destructive-action):disabled {
